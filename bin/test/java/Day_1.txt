@@ -1,0 +1,135 @@
+Pseudecodes and Flowcharts
+Day--1
+Assignment 1: Pseudocode Development - Task: Write a detailed pseudocode for a simple program that 
+takes a number as input, calculates the square if it's even or the cube if it's odd,
+ and then outputs the result. Incorporate conditional and looping constructs.
+
+
+
+Assignment 2: Flowchart Creation - Design a flowchart that outlines the logic for a user login process. 
+It should include conditional paths for successful and unsuccessful login attempts, 
+and a loop that allows a user three attempts before locking the account.
+
+
+
+Assignment 3: Function Design and Modularization - Create a document that describes the design of two modular
+ functions: one that returns the factorial of a number, 
+and another that calculates the nth Fibonacci number.
+ Include pseudocode and a brief explanation of how modularity 
+in programming helps with code reuse and organization.
+
+
+
+Answers--
+1.START
+
+  // Initialize variables
+  DECLARE number, result
+
+  // Input: Prompt user to enter a number
+  PRINT "Enter a number:"
+  READ number
+
+  // Conditional: Check if the number is even or odd
+  IF number MOD 2 == 0 THEN
+    // Calculate square if even
+    result = number * number
+  ELSE
+    // Calculate cube if odd
+    result = number * number * number
+  ENDIF
+
+  // Output the result
+  PRINT "The result is: ", result
+
+END
+
+
+2.answer in pdf
+
+
+3.Document: Modular Functions Design
+
+ -----Introduction-------------
+
+Modularity in programming refers to the practice of breaking down a program into smaller, manageable, and reusable components called functions or modules. 
+Each function is designed to perform a specific task, making the overall program more organized, easier to maintain, and reusable across different parts of the program or even in different projects.
+
+#### Function 1: Factorial of a Number
+
+**Description**: The function `factorial` calculates the factorial of a given non-negative integer. 
+The factorial of a number \( n \) is the product of all positive integers less than or equal to \( n \).
+
+**Pseudocode**:
+
+```
+FUNCTION factorial(n)
+    IF n < 0 THEN
+        RETURN "Error: Input must be a non-negative integer"
+    ELSE IF n == 0 OR n == 1 THEN
+        RETURN 1
+    ELSE
+        result = 1
+        FOR i FROM 2 TO n DO
+            result = result * i
+        ENDFOR
+        RETURN result
+    ENDIF
+END FUNCTION
+```
+
+**Explanation**:
+- The function checks if the input \( n \) is a non-negative integer.
+- If \( n \) is less than 0, it returns an error message.
+- If \( n \) is 0 or 1, it returns 1 (since 0! = 1! = 1).
+- For other values of \( n \), it initializes a result variable to 1 and iteratively multiplies it by each integer from 2 to \( n \).
+
+#### Function 2: nth Fibonacci Number
+
+**Description**: The function `fibonacci` calculates the nth Fibonacci number. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, 
+starting from 0 and 1.
+
+**Pseudocode**:
+
+```
+FUNCTION fibonacci(n)
+    IF n < 0 THEN
+        RETURN "Error: Input must be a non-negative integer"
+    ELSE IF n == 0 THEN
+        RETURN 0
+    ELSE IF n == 1 THEN
+        RETURN 1
+    ELSE
+        a = 0
+        b = 1
+        FOR i FROM 2 TO n DO
+            temp = a + b
+            a = b
+            b = temp
+        ENDFOR
+        RETURN b
+    ENDIF
+END FUNCTION
+```
+
+**Explanation**:
+- The function checks if the input \( n \) is a non-negative integer.
+- If \( n \) is less than 0, it returns an error message.
+- If \( n \) is 0, it returns 0 (the first Fibonacci number).
+- If \( n \) is 1, it returns 1 (the second Fibonacci number).
+- For other values of \( n \), it initializes two variables \( a \) and \( b \) to 0 and 1, respectively, and 
+iteratively updates them to store the next Fibonacci number in the sequence until it reaches the nth number.
+
+#### Benefits of Modularity
+
+- **Code Reuse**: Modular functions can be reused across different parts of the program or in other programs, reducing redundancy and saving development time.
+- **Organization**: Breaking down complex tasks into smaller functions makes the code more organized and easier to understand.
+- **Maintenance**: It is easier to maintain and debug modular code since each function is responsible for a specific task.
+- **Scalability**: Modularity allows for easier scalability as new features can be added without altering existing functions significantly.
+- **Testing**: Individual functions can be tested independently, leading to more reliable and robust code.
+
+#### Conclusion
+
+Designing programs with modular functions not only enhances code reuse and organization but also improves maintainability, scalability, and testing. The `factorial` and `fibonacci` functions are examples of how modularity can be applied to solve common mathematical problems in a structured and efficient manner.
+
+
